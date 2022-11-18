@@ -1,0 +1,19 @@
+{
+  "name": "be",
+  "version": "1.0.0",
+  "description": "Backend application trashure",
+  "main": "index.js",
+  "scripts": {
+    "start": "set NODE_ENV=production && nodemon server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.25.6"
+  }
+}
