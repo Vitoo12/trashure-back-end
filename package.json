@@ -4,6 +4,7 @@
   "description": "Backend application trashure",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint ./",
     "start": "set NODE_ENV=production && nodemon server.js",
     "dev": "nodemon server.js"
   },
@@ -14,6 +15,12 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20",
     "sequelize": "^6.25.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
   }
 }
