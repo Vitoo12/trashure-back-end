@@ -24,6 +24,10 @@ const User = sequelize.define('user', {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
+  nik: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
 });
 
 module.exports = User;

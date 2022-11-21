@@ -4,6 +4,8 @@ require('dotenv').config();
 const userRoutes = require('./routes/userRoutes');
 const sequelize = require('./utils/database');
 
+require('./models/userModel');
+
 const app = express();
 
 // menggunakan ejs template engine
@@ -19,10 +21,12 @@ app.use('/register', userRoutes);
 sequelize
   .authenticate()
   .then(() => {
-    console.log('database berhasil disambungkan');
-    // starting server and
-    const PORT = process.env.PORT || 5000;
-    app.listen(PORT, console.log(`server running in ${process.env.NODE_ENV} mode port ${PORT}`));
+    sequelize.sync().then(() => {
+      console.log('database berhasil disambungkan');
+      // starting server and
+      const PORT = process.env.PORT || 5000;
+      app.listen(PORT, console.log(`server running in ${process.env.NODE_ENV} mode port ${PORT}`));
+    });
   })
   .catch(() => {
     console.log('database gagal disambungkan');
