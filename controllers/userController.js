@@ -103,4 +103,39 @@ module.exports = {
       });
     }
   },
+  // @desc me redirect ke halaman form untuk  register
+  formLogin(req, res) {
+    res.render('login');
+  },
+  // @desc memhapus data user
+  async loginUser(req, res) {
+    try {
+      const { email, password } = req.body;
+      const hashedPassword = getHashedPassword(password);
+
+      const user = await User.findOne({
+        where: {
+          email,
+          password: hashedPassword,
+        },
+      });
+      if (!user) {
+        res.status(402).json({
+          success: false,
+          message: 'email atau password anda salah',
+        });
+      } else {
+        res.status(200).json({
+          success: true,
+          message: 'Anda berhasil login',
+          data: user,
+        });
+      }
+    } catch {
+      res.status(500).json({
+        succes: false,
+        message: 'something went wrong',
+      });
+    }
+  },
 };

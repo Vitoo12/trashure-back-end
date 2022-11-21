@@ -2,6 +2,8 @@
 const express = require('express');
 require('dotenv').config();
 const bodyParser = require('body-parser');
+const registerRoutes = require('./routes/registerRoutes');
+const loginRoutes = require('./routes/loginRoutes');
 const userRoutes = require('./routes/userRoutes');
 const sequelize = require('./utils/database');
 
@@ -19,7 +21,9 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 
 // routing
-app.use('/register', userRoutes);
+app.use('/register', registerRoutes);
+app.use('/login', loginRoutes);
+app.use('/user', userRoutes);
 
 // check in database
 sequelize
