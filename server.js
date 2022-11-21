@@ -1,12 +1,16 @@
 /* eslint-disable no-console */
 const express = require('express');
 require('dotenv').config();
+const bodyParser = require('body-parser');
 const userRoutes = require('./routes/userRoutes');
 const sequelize = require('./utils/database');
 
 require('./models/userModel');
 
 const app = express();
+
+// To parse cookies from the HTTP Request
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // menggunakan ejs template engine
 app.set('view engine', 'ejs');
