@@ -27,7 +27,7 @@ module.exports = {
       });
       res.status(200).json({
         succes: true,
-        message: 'berhasil menambahkan data mahasiswa',
+        message: 'berhasil menambahkan user',
         data: user,
       });
     } catch (err) {
@@ -44,7 +44,7 @@ module.exports = {
 
       res.status(200).json({
         succes: true,
-        message: 'melihat seluruh data mahasiswa',
+        message: 'melihat seluruh user',
         data: user,
       });
     } catch {
@@ -62,13 +62,13 @@ module.exports = {
       if (!user) {
         return res.status(404).json({
           succes: false,
-          message: 'data mahasiswa tidak ditemukan',
+          message: 'user tidak ditemukan',
         });
       }
 
       res.status(200).json({
         succes: true,
-        message: `melihat data mahasiswa ke-${req.params.id}`,
+        message: `melihat user ke-${req.params.id}`,
         data: user,
       });
     } catch (err) {
@@ -86,7 +86,7 @@ module.exports = {
       if (!user) {
         return res.status(404).json({
           succes: false,
-          message: 'data user tidak ditemukan',
+          message: 'user tidak ditemukan',
         });
       }
 
@@ -94,7 +94,7 @@ module.exports = {
 
       res.status(200).json({
         succes: true,
-        message: 'data userberhasil terhapus',
+        message: 'user berhasil terhapus',
       });
     } catch (err) {
       res.status(400).json({
