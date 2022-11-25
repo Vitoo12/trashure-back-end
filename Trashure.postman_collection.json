@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "8275c451-889c-4984-8047-f7a1477db997",
+		"name": "Trashure",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23049048"
+	},
+	"item": [
+		{
+			"name": "Organik",
+			"item": [
+				{
+					"name": "Get All Organik",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/organik",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"organik"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Organik",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Maggot\",\r\n    \"description\":\"Ini Maggot\",\r\n    \"image\":\"https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fwallpaper%2F&psig=AOvVaw170VLRGRCGpZsub8hj-u1e&ust=1668790136936000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLjL4ezVtfsCFQAAAAAdAAAAABAE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/organik",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"organik"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Organik",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/organik/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"organik",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Organik",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/organik/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"organik",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Organik",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/organik/ea245830-ebe9-4bad-9414-f99bb6379f89",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"organik",
+								"ea245830-ebe9-4bad-9414-f99bb6379f89"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Anorganik",
+			"item": [
+				{
+					"name": "Get All Anorganik",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/anorganik",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"anorganik"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Anorganik",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"botol\",\r\n    \"description\":\"ahaha\",\r\n    \"image\":\"https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fwallpaper%2F&psig=AOvVaw170VLRGRCGpZsub8hj-u1e&ust=1668790136936000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLjL4ezVtfsCFQAAAAAdAAAAABAE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/anorganik",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"anorganik"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Anorganik",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/anorganik/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"anorganik",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Anorganik",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Botol\",\r\n    \"description\":\"ahaha\",\r\n    \"image\":\"https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fwallpaper%2F&psig=AOvVaw170VLRGRCGpZsub8hj-u1e&ust=1668790136936000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLjL4ezVtfsCFQAAAAAdAAAAABAE\",\r\n    \"id_tips\":\"Maggot 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/anorganik/f5297bdb-c6cf-4a4e-a4b3-6f7019f5b338",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"anorganik",
+								"f5297bdb-c6cf-4a4e-a4b3-6f7019f5b338"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Anorganik",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/anorganik/9394277c-6a84-4ab8-a00e-64fcc79178d7",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"anorganik",
+								"9394277c-6a84-4ab8-a00e-64fcc79178d7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tips",
+			"item": [
+				{
+					"name": "Get All Tips",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/tips",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tips"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Tips",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"plastik nih boss\",\r\n    \"descDetail\":\"ini adalah cara mengelola menjadi botol\",\r\n    \"imageDetail\":\"https://thumb.viva.co.id/media/frontend/thumbs3/2020/12/04/5fc9a4ab3d341-deteksi-gambar_665_374.jpg\",\r\n    \"AnorganikId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/tips",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tips"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tips",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/tips/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tips",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Tips",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/tips/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tips",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tips",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/tips/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tips",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
