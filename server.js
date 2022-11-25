@@ -6,8 +6,12 @@ const registerRoutes = require('./routes/registerRoutes');
 const loginRoutes = require('./routes/loginRoutes');
 const userRoutes = require('./routes/userRoutes');
 const sequelize = require('./utils/database');
+const organikRoutes = require('./routes/organikRoutes');
+const anorganikRoutes = require('./routes/anorganikRoutes');
+const tipsRoutes = require('./routes/tipsRoutes');
 
 require('./models/userModel');
+require('./models/index');
 
 const app = express();
 
@@ -24,6 +28,14 @@ app.use(express.json());
 app.use('/register', registerRoutes);
 app.use('/login', loginRoutes);
 app.use('/user', userRoutes);
+// API untuk mengembalikan data sampah anorganik
+app.use('/anorganik', anorganikRoutes);
+
+// API untuk mengembalikan data sampah organik
+app.use('/organik', organikRoutes);
+
+// API untuk mengembalikan data tips
+app.use('/tips', tipsRoutes);
 
 // check in database
 sequelize
