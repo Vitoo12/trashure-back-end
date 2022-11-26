@@ -30,6 +30,7 @@ const User = sequelize.define('user', {
   },
   alamat: {
     type: DataTypes.STRING,
+    allowNull: false,
   },
 });
 

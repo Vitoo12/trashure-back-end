@@ -9,11 +9,6 @@ const getHashedPassword = (password) => {
 };
 
 module.exports = {
-  // @desc me redirect ke halaman form untuk  register
-  formRegister(req, res) {
-    // res.sendFile('form.html', { root: 'views' });
-    res.render('form');
-  },
   // @desc menambahkan data user ke database
   async createUser(req, res) {
     try {
@@ -24,6 +19,7 @@ module.exports = {
         email: req.body.email,
         number: req.body.number,
         nik: req.body.nik,
+        alamat: req.body.alamat,
       });
       res.status(200).json({
         succes: true,
@@ -128,10 +124,6 @@ module.exports = {
         message: err.message,
       });
     }
-  },
-  // @desc me redirect ke halaman form untuk  register
-  formLogin(req, res) {
-    res.render('login');
   },
   // @desc memhapus data user
   async loginUser(req, res) {
