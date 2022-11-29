@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 25, 2022 at 02:42 AM
+-- Generation Time: Nov 28, 2022 at 05:01 PM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -102,6 +102,31 @@ INSERT INTO `tips` (`id`, `title`, `desc_detail`, `image_detail`, `organik_id`, 
 (26, 'Hiasan Meja dan Dinding dari limbah kaca', 'Bahan: Koran Bekas,Lem,Kardus Bekas.Alat:Pensil,Gunting,Cutter,Kuas untuk lem dan Penggaris.Cara:Buat pola pada kardus bekas untuk ukuran bingkai foto yang diinginkan.Lalu potong kardus sesuai dengan pola menggunakan cutter atau gunting.Gulung koran bekas sampai gulungannya kecil dan padat.Olesi kardus yang telah berpola dengan menggunakan lem.Kemudian potong gulungan koran dengan menggunakan cutter sesuaiakan dengan ukuran bingkai.Lalu tempelkan gulungan koran yang sudah diukur pada semua bingkai kardus.Lalu hiasi bingkai yang setengah jadi dengan menggunakan pita.Siapkan kardus lagi kemudian potong seperti bingkai foto tetapi tengah dari kardus tersebut tidak ikut dipotong, karena untuk tutup bagian belakang foto.Bungkus penutup bingkai dengan koran bekas agar tampak cantik.Kemudian satukan bingkai foto dengan penutupnya dengan menggunakan lem.Setelah menyatu pasang foto yang diinginkan pada bingkai yang sudah jadi.Jangan lupa berikan gantungan pada bingkai agar bisa ditempelkan ditembok.Setelah itu bingkai foto siap untuk digunakan.', 'https://photos.app.goo.gl/7gm6Kunw4ScjurcU8', NULL, 7),
 (27, 'Kerajinan Limbah Keras Anorganik Tas Belanja', 'Alat dan Bahan:bungkus kopi instan,kain vuring atau kain polos,gunting,benang dan jarum,penggaris,ritsleting.Berikut adalah langkah-langkah cara membuat tas dari bungkus kopi: Pertama, siapkan bungkus kopi instan merek apa saja dan bersihkan sisa bubuk kopi dengan air lalu dikeringkan atau dijemur atau bisa di lap dengan kain.Gunting bagian bawah bungkus kopi. Bungkus kopi dapat dikombinasikan dengan bungkus kopi yang lain, sesuai dengan selera masing-masing.Gunting bungkus kopi membentuk dua sama rata sehingga terbentuk dua bagian.Lipat bungkus 1 cm ke dalam di ujung tas dan bawahnya, total lebar lipatan sebesar 2 cm.Kemudian, anyam bungkus kopi yang sudah disediakan sehingga berbentuk baling-baling. Jika kamu menyiapkan 100 bungkus untuk tas ukuran kecil, nanti nya akan menjadi 200 lipatan bungkus kopi. Bagian dalam atau luar bungkus kopi dapat digunakan, sesuai dengan selera masing-masing.Jika kerangka tas anyaman sudah jadi, saatnya dirapikan dengan menjahit bagian atas tasnya supaya anyaman tidak mudah lepas.Lalu, tambahkan kain vuring atau kain polos ke dalam tas dan tidak terlalu tipis.Yang terakhir, tambahkan ritsleting untuk pengait tas yang sudah siap untuk dipakai.', 'https://photos.app.goo.gl/g56MBMGQCYoVvmuM6', NULL, 8);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` char(36) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `number` int(11) NOT NULL,
+  `nik` int(11) NOT NULL,
+  `alamat` varchar(255) NOT NULL,
+  `createdAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `password`, `email`, `number`, `nik`, `alamat`, `createdAt`, `updatedAt`) VALUES
+('9537f240-a4e8-4c1b-8442-567ccfc6f49b', 'paisal', 'VNXLLTMtvbSFApPKrkVZzoi2UWPx6l1OSzrEnXct7RQ=', 'qqqq@gmail.com', 123456, 123456, 'bandung', '2022-11-26 12:33:21', '2022-11-26 12:33:21');
+
 --
 -- Indexes for dumped tables
 --
@@ -127,6 +152,12 @@ ALTER TABLE `tips`
   ADD KEY `anorganik_id` (`anorganik_id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -134,19 +165,19 @@ ALTER TABLE `tips`
 -- AUTO_INCREMENT for table `anorganiks`
 --
 ALTER TABLE `anorganiks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `organiks`
 --
 ALTER TABLE `organiks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tips`
 --
 ALTER TABLE `tips`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- Constraints for dumped tables
